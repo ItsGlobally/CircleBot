@@ -1,0 +1,9 @@
+{
+  "name": "CircleBot",
+  "version": "1.0.0",
+  "description": "A Discord bot for Circle Network",
+  "main": "index.ts",
+  "author": "ItsGlobally",
+  "license": "MIT",
+  "private": false
+}
