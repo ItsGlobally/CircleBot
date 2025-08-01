@@ -2,8 +2,16 @@
   "name": "CircleBot",
   "version": "1.0.0",
   "description": "A Discord bot for Circle Network",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "author": "ItsGlobally",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "discord.js": "^14.21.0",
+    "dotenv": "^17.2.1",
+    "puppeteer": "^24.15.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  }
 }
