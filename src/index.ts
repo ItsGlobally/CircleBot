@@ -2,6 +2,10 @@ import { Client, Collection, GatewayIntentBits } from 'discord.js';
 import { config } from 'dotenv';
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 config();
 
@@ -17,7 +21,7 @@ const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('
 
 for (const file of commandFiles) {
   const filePath = path.join(commandsPath, file);
-  const command = (await import(filePath)).default;
+  const command =   (await import(filePath)).default;
   if ('data' in command && 'execute' in command) {
     client.commands.set(command.data.name, command);
   } else {
